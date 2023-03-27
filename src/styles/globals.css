@@ -4,9 +4,12 @@
 
 
 @layer base {
-    @font-face{
+    /* @font-face{
         font-family: "Druk";
         font-weight: 500;
         src: url('../../public/fonts/Roboto-Bold.ttf') format('ttf');
-    }
+    } */
+}
+@layer components {
+  
 }
