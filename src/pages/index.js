@@ -6,7 +6,7 @@ import axios from 'axios'
 
 export default function Home({ data }) {
   const [isLoading, setIsLoading] = useState(false) 
-  
+
   return (
     <>
       <Head>
@@ -24,6 +24,7 @@ export default function Home({ data }) {
 
 // export async function getServerSideProps(){
 //   let data = []
+
 //   try {
 //     const response = await axios.get('https://api.jikan.moe/v4/seasons/now')
 //     data = await response.data
