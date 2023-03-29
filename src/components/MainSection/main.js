@@ -6,7 +6,7 @@ import 'swiper/css/bundle';
 export default function MainSection(props) {
 const isLoading = props.isLoading
   return (
-    <div>
+    <div className=''>
         {!isLoading ? (
         <>
           <Swiper
@@ -18,14 +18,38 @@ const isLoading = props.isLoading
              }}
             loop={true}
             centeredSlides={true}
-            className="w-full h-[40vh] text-center"
-          >
-            <SwiperSlide>Slide 1</SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
+            className="w-full h-[40vh] text-center text-white mb-3" >
+
+            <SwiperSlide>
+              <div className='relative w-full h-full'>
+                  <Image 
+                    src="/img/mao.webp"
+                    priority
+                    fill
+                    sizes='(max-width: 768px) 100vw,
+                    (max-width: 1200px) 50vw,
+                    33vw'
+                    className='object-cover'
+                    alt="mao"
+                  />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className='relative w-full h-full'>
+                  <Image 
+                    src="/img/mao.webp"
+                    priority
+                    fill
+                    sizes='(max-width: 768px) 100vw,
+                    (max-width: 1200px) 50vw,
+                    33vw'
+                    className='object-cover object-top'
+                    alt="mao"
+                  />
+              </div>
+            </SwiperSlide>
           </Swiper>
-          <div className='grid grid-cols-4 w-full bg-yellow-400 gap-2'>
+          <div className='grid grid-cols-3 sm:grid-cols-4 w-full gap-2'>
             <div className="relative w-full h-[55vh] object-cover">
             <Image
                 src="/img/mao.webp"

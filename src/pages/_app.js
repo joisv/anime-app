@@ -3,7 +3,7 @@ import Navbar from '@/components/Navigation/navbar'
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className='bg-background min-h-screen'>
+    <div className='bg-background h-fit'>
       <Navbar />
       <div className='max-w-screen-sm  mx-auto'>
         <Component {...pageProps} />

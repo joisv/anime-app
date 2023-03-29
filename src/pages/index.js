@@ -1,12 +1,12 @@
 import Head from 'next/head'
 import { useState } from 'react'
 import MainSection from '@/components/MainSection/main'
-import Link from 'next/link'
+import axios from 'axios'
 
 
-export default function Home() {
+export default function Home({ data }) {
   const [isLoading, setIsLoading] = useState(false) 
- 
+  
   return (
     <>
       <Head>
@@ -21,3 +21,17 @@ export default function Home() {
     </>
   )
 }
+
+// export async function getServerSideProps(){
+//   let data = []
+//   try {
+//     const response = await axios.get('https://api.jikan.moe/v4/seasons/now')
+//     data = await response.data
+//   } catch (error) {
+//     console.log(error);
+//   }
+  
+//   return {
+//     props: {data}
+//   }
+// }
