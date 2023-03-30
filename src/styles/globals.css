@@ -13,6 +13,6 @@
 @layer components {
 
     .bg-sliders {
-        box-shadow: inset 0px -70px 28px 136px #181818;
+        background-color: rgb(238, 202, 0);
     }
 }
