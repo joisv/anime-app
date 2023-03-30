@@ -10,9 +10,9 @@ export default function MainSection() {
         modules={[Autoplay]}
         spaceBetween={50}
         slidesPerView={1}
-        // autoplay={{ 
-        //   delay: 1500
-        //  }}
+        autoplay={{ 
+          delay: 1500
+         }}
         loop={true}
         centeredSlides={true}
         className="w-full h-[40vh] text-center text-white mb-3" >
