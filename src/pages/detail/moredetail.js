@@ -1,6 +1,6 @@
 
 export default function moredetail({ data }) {
-    console.log(data);
+  
   return (
     <div>
       

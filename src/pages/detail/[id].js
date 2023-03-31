@@ -5,7 +5,10 @@ import Image from "next/image"
 export default function DetailById() {
   const router = useRouter()
   const { id } = router.query 
-   
+  const ids = 12
+  const hanldeMoreInfoButton = () => {
+  router.push(`/detail/moredetail?q=${ids}`)
+  }
   return (
     <main>
       <div className="min-h-screen flex flex-wrap justify-center relative">
@@ -38,9 +41,9 @@ export default function DetailById() {
               <p className="italic">Action, Drama, Adventure</p>
             </div>
             <div className="mt-10">
-              <button className="px-3 py-2 bg-white w-full">
-                <h2 className="text-xl font-medium">Start watch first episode</h2>
-              </button>
+                <button className="px-3 py-2 bg-white w-full" onClick={hanldeMoreInfoButton}>
+                  <h2 className="text-xl font-medium">More detail</h2>
+                </button>
             </div>
           </div>
       </div>
