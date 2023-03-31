@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }) {
     <div className='bg-background min-h-screen h-fit'>
       { pathname === '/search' ? '' :  <Navbar /> }
       <div className='max-w-screen-sm  mx-auto'>
-      { pathname === '/search' ? '' :  <Nav /> }
+      { pathname === '/search' || pathname === '/detail' ? '' :  <Nav /> }
         <Component {...pageProps} />
       </div>
     </div>
