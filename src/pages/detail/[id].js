@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { useRouter } from "next/router"
 import Image from "next/image"
-
+import { motion as m } from "framer-motion"
 export default function DetailById() {
   const router = useRouter()
   const { id } = router.query 
@@ -11,7 +11,12 @@ export default function DetailById() {
   }
   return (
     <main>
-      <div className="min-h-screen flex flex-wrap justify-center relative">
+      <m.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 1 }}
+      transition={{ duration: 0.4, ease: "easeIn" }}
+      className="min-h-screen flex flex-wrap justify-center relative">
           <div className="relative sm:w-[18vw] sm:h-[50vh] w-[45vw] h-[30vh]">
               <Image 
                 src="/img/mao.webp"
@@ -46,7 +51,7 @@ export default function DetailById() {
                 </button>
             </div>
           </div>
-      </div>
+      </m.div>
     </main>
   )
 }
